@@ -1,4 +1,7 @@
 import styled, {keyframes} from 'styled-components';
+// @ts-ignore: unused variable
+// prettier-ignore
+import { HTMLAttributes, AnchorHTMLAttributes, ClassAttributes } from 'react';
 
 const wave = keyframes`
   0%,100%{
