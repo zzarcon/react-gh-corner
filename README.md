@@ -1,2 +1,2 @@
 # react-gh-corner
-React portals + Github corners + Styled component = 💘
+> React portals + Github corners + Styled component = 💘
