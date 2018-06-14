@@ -12,7 +12,7 @@ export interface Position {
 
 export interface AppState {
   href: string;
-  position?: Position;
+  position: Position;
   bgColor?: string;
   size?: number;
   ariaLabel?: string;
@@ -26,7 +26,7 @@ const positionItems = [
     ]
   }
 ];
-const selectedItem = positionItems[0].items[0];
+const selectedItem: any = positionItems[0].items[0];
 
 export default class App extends Component <{}, AppState> {
   state: AppState = {
@@ -37,28 +37,28 @@ export default class App extends Component <{}, AppState> {
     position: selectedItem
   }
 
-  onAriaLabelChange = (e) => {
+  onAriaLabelChange = (e: any) => {
     const ariaLabel = e.target.value;
     this.setState({
       ariaLabel
     });
   }
 
-  onSizeChange = (e) => {
+  onSizeChange = (e: any) => {
     const size = e.target.value;
     this.setState({
       size
     });
   }
 
-  onColorChange = (e) => {
+  onColorChange = (e: any) => {
     const bgColor = e.target.value;
     this.setState({
       bgColor
     });
   }
 
-  onPositionChange = (e) => {
+  onPositionChange = (e: any) => {
     this.setState({
       position: e.item
     });
