@@ -27,7 +27,7 @@ const positionItems = [
   }
 ];
 const selectedItem = positionItems[0].items[0];
-console.log(selectedItem)
+
 export default class App extends Component <{}, AppState> {
   state: AppState = {
     href: 'https://github.com/zzarcon/react-gh-corner',
@@ -66,7 +66,7 @@ export default class App extends Component <{}, AppState> {
 
   render() {
     const {href, position, size, bgColor, ariaLabel} = this.state;
-    console.log(position.value)
+
     return (
       <AppWrapper>
         <GHCorner 
