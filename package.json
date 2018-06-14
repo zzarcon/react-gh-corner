@@ -7,6 +7,8 @@
   "author": "Hector Leon Zarco Garcia <hezarco@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@atlaskit/field-text": "^6.0.3",
+    "@atlaskit/single-select": "^5.1.1",
     "ts-react-toolbox": "^0.1.10"
   },
   "engines": {

@@ -12,5 +12,6 @@ injectGlobal`
 `;
 
 export const AppWrapper = styled.div`
-
+  width: 800px;
+  margin: 0 auto;
 `;
