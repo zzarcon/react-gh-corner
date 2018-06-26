@@ -12,6 +12,14 @@ injectGlobal`
 `;
 
 export const AppWrapper = styled.div`
-  width: 800px;
+  width: 200px;
   margin: 0 auto;
+`;
+
+export const Label = styled.div`
+  color: #6B778C;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  padding: 20px 0px 4px 0px;
 `;

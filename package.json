@@ -9,6 +9,7 @@
   "devDependencies": {
     "@atlaskit/field-text": "^6.0.3",
     "@atlaskit/single-select": "^5.1.1",
+    "@atlaskit/toggle": "^4.0.3",
     "ts-react-toolbox": "^0.1.10"
   },
   "engines": {

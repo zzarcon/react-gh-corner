@@ -2,7 +2,8 @@ import * as React from 'react';
 import {Component} from 'react';
 import FieldText from '@atlaskit/field-text';
 import Select from '@atlaskit/single-select';
-import {AppWrapper} from './styled';
+import Toggle from '@atlaskit/toggle';
+import {AppWrapper, Label} from './styled';
 import GHCorner, { CornerPosition } from '../src';
 
 export interface Position {
@@ -16,6 +17,7 @@ export interface AppState {
   bgColor?: string;
   size?: number;
   ariaLabel?: string;
+  openInNewTab?: boolean;
 }
 
 const positionItems = [
@@ -34,13 +36,21 @@ export default class App extends Component <{}, AppState> {
     ariaLabel: 'View source on Github',
     bgColor: '#64CEAA',
     size: 180,
-    position: selectedItem
+    position: selectedItem,
+    openInNewTab: false
   }
 
   onAriaLabelChange = (e: any) => {
     const ariaLabel = e.target.value;
     this.setState({
       ariaLabel
+    });
+  }
+
+  onHrefChange = (e: any) => {
+    const href = e.target.value;
+    this.setState({
+      href
     });
   }
 
@@ -64,8 +74,14 @@ export default class App extends Component <{}, AppState> {
     });
   } 
 
+  onOpenInNewTabChange = () => {
+    this.setState({
+      openInNewTab: !this.state.openInNewTab
+    });
+  }
+
   render() {
-    const {href, position, size, bgColor, ariaLabel} = this.state;
+    const {href, position, size, bgColor, ariaLabel, openInNewTab} = this.state;
 
     return (
       <AppWrapper>
@@ -75,6 +91,7 @@ export default class App extends Component <{}, AppState> {
           bgColor={bgColor}
           size={size}
           position={position.value}
+          openInNewTab={openInNewTab}
         />
         <Select
           label="Position"
@@ -82,14 +99,16 @@ export default class App extends Component <{}, AppState> {
           defaultSelected={selectedItem}
           onSelected={this.onPositionChange}
         />
+        <FieldText label="Href" value={href} onChange={this.onHrefChange} />
+        <FieldText label="Size" value={`${size}`} onChange={this.onSizeChange} />
         <FieldText label="Aria label" value={ariaLabel} onChange={this.onAriaLabelChange} />
         <div>
-          Color
+          <Label>Color</Label>
           <input value={bgColor} type="color" onChange={this.onColorChange} />
         </div>
         <div>
-          Size
-          <input value={size} type="number" onChange={this.onSizeChange} />
+          <Label>Open in a new tab</Label>
+          <Toggle isChecked={openInNewTab} onChange={this.onOpenInNewTabChange} size="large" label="Open in a new tab" />
         </div>
       </AppWrapper>
     )

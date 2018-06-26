@@ -57,6 +57,14 @@
     babel-runtime "^6.26.0"
     uuid "^3.1.0"
 
+"@atlaskit/icon@^12.1.2":
+  version "12.4.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-12.4.0.tgz#7c75642279882be0263bd9090fa2f910436888e9"
+  dependencies:
+    "@atlaskit/theme" "^4.0.4"
+    babel-runtime "^6.26.0"
+    uuid "^3.1.0"
+
 "@atlaskit/inline-dialog@^7.1.1":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@atlaskit/inline-dialog/-/inline-dialog-7.1.1.tgz#c4b18d786e90057f5d10f7f7b729df60aed9ed25"
@@ -113,6 +121,20 @@
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-4.0.3.tgz#da5b1a55d43a8ea338d0d7f1aa4cd27d10b18507"
   dependencies:
     prop-types "^15.5.10"
+
+"@atlaskit/theme@^4.0.4":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-4.0.5.tgz#be8f46cd9911447971f7d188a1bd25881e6fff02"
+  dependencies:
+    prop-types "^15.5.10"
+
+"@atlaskit/toggle@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-4.0.3.tgz#b79ef17b7c8ecccf7ca897c343f90b33ec53ffc5"
+  dependencies:
+    "@atlaskit/icon" "^12.1.2"
+    "@atlaskit/theme" "^4.0.4"
+    uuid "^3.1.0"
 
 "@atlaskit/tooltip@^10.2.0":
   version "10.2.0"
