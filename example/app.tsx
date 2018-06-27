@@ -3,7 +3,7 @@ import {Component} from 'react';
 import FieldText from '@atlaskit/field-text';
 import Select from '@atlaskit/single-select';
 import Toggle from '@atlaskit/toggle';
-import {AppWrapper, Label} from './styled';
+import {AppWrapper, Label, Footer, Title} from './styled';
 import GHCorner, { CornerPosition } from '../src';
 
 export interface Position {
@@ -29,10 +29,11 @@ const positionItems = [
   }
 ];
 const selectedItem: any = positionItems[0].items[0];
+const repoUrl = 'https://github.com/zzarcon/react-gh-corner';
 
 export default class App extends Component <{}, AppState> {
   state: AppState = {
-    href: 'https://github.com/zzarcon/react-gh-corner',
+    href: repoUrl,
     ariaLabel: 'View source on Github',
     bgColor: '#64CEAA',
     size: 180,
@@ -85,6 +86,11 @@ export default class App extends Component <{}, AppState> {
 
     return (
       <AppWrapper>
+        <Title>
+          <a href={repoUrl}>
+            React GH Corner ✨
+          </a>
+        </Title>
         <GHCorner 
           href={href}
           ariaLabel={ariaLabel}
@@ -98,18 +104,23 @@ export default class App extends Component <{}, AppState> {
           items={positionItems}
           defaultSelected={selectedItem}
           onSelected={this.onPositionChange}
+          droplistShouldFitContainer={true}
+          shouldFitContainer
         />
-        <FieldText label="Href" value={href} onChange={this.onHrefChange} />
-        <FieldText label="Size" value={`${size}`} onChange={this.onSizeChange} />
-        <FieldText label="Aria label" value={ariaLabel} onChange={this.onAriaLabelChange} />
-        <div>
-          <Label>Color</Label>
-          <input value={bgColor} type="color" onChange={this.onColorChange} />
-        </div>
-        <div>
-          <Label>Open in a new tab</Label>
-          <Toggle isChecked={openInNewTab} onChange={this.onOpenInNewTabChange} size="large" label="Open in a new tab" />
-        </div>
+        <FieldText shouldFitContainer label="Href" value={href} onChange={this.onHrefChange} />
+        <FieldText shouldFitContainer label="Size" value={`${size}`} onChange={this.onSizeChange} />
+        <FieldText shouldFitContainer label="Aria label" value={ariaLabel} onChange={this.onAriaLabelChange} />
+        <Footer>
+          <div>
+            <Label>Color</Label>
+            <input value={bgColor} type="color" onChange={this.onColorChange} />
+          </div>
+          <div>
+            <Label>Open in a new tab</Label>
+            <Toggle isChecked={openInNewTab} onChange={this.onOpenInNewTabChange} size="large" label="Open in a new tab" />
+          </div>
+        </Footer>
+        
       </AppWrapper>
     )
   }
