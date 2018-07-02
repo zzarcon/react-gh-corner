@@ -1,6 +1,11 @@
 # react-gh-corner [![Build Status](https://travis-ci.org/zzarcon/react-gh-corner.svg?branch=master)](https://travis-ci.org/zzarcon/react-gh-corner)
 > React portals + Github corners + Styled component = 💘
 
+<div align="center">
+  <img src="demo.gif" alt="demo">
+  <br><br>
+</div>
+
 # Demo 🍿
 
 [https://zzarcon.github.io/react-gh-corner](https://zzarcon.github.io/react-gh-corner)
