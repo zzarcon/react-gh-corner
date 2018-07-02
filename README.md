@@ -50,3 +50,7 @@ interface Props {
 ```
 
 See [example/](https://github.com/zzarcon/react-gh-corner/tree/master/example) for full example.
+
+# Author
+
+[@zzarcon](https://twitter.com/zzarcon)
