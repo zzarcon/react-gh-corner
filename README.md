@@ -37,6 +37,7 @@ import GHCorner from 'react-gh-corner';
   bgColor="hotpink"
   size={250}
   ariaLabel="Check my project"
+  openInNewTab={true}
 />
 ```
 
@@ -51,6 +52,7 @@ interface Props {
   bgColor?: string;
   size?: number;
   ariaLabel?: string;
+  openInNewTab?: boolean;
 }
 ```
 
