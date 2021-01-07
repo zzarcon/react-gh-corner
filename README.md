@@ -33,7 +33,7 @@ import GHCorner from 'react-gh-corner';
 
 <GHCorner
   href="https://github.com/zzarcon/react-gh-corner"
-  positon="top-right"
+  position="top-right"
   bgColor="hotpink"
   size={250}
   ariaLabel="Check my project"
