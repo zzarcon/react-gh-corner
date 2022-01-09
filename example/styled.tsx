@@ -1,15 +1,11 @@
-import styled, {injectGlobal} from 'styled-components';
+import styled from "@emotion/styled";
+import { Global } from "@emotion/react";
 
-injectGlobal`
-  body {
-    font-family: Helvetica;
-    background-color: #D8D1F5;
-  }
-
-  * {
-    box-sizing: content-box;
-  }
-`;
+export const globalStyles = (
+  <Global
+    styles={{}}
+  />
+);
 
 export const AppWrapper = styled.div`
   width: 285px;
@@ -20,7 +16,7 @@ export const AppWrapper = styled.div`
 `;
 
 export const Label = styled.div`
-  color: #6B778C;
+  color: #6b778c;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.33;
@@ -41,7 +37,7 @@ export const Title = styled.h1`
 
   a {
     text-decoration: none;
-    color: #FFC49D;
+    color: #ffc49d;
     border-bottom-width: 3px;
     border-bottom-style: dashed;
 

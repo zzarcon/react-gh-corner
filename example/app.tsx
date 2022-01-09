@@ -1,9 +1,8 @@
-import * as React from 'react';
 import {Component} from 'react';
 import FieldText from '@atlaskit/field-text';
 import Select from '@atlaskit/single-select';
 import Toggle from '@atlaskit/toggle';
-import {AppWrapper, Label, Footer, Title} from './styled';
+import {AppWrapper, Label, Footer, Title, globalStyles} from './styled';
 import GHCorner, { CornerPosition } from '../src';
 
 export interface Position {
@@ -120,7 +119,7 @@ export default class App extends Component <{}, AppState> {
             <Toggle isChecked={openInNewTab} onChange={this.onOpenInNewTabChange} size="large" label="Open in a new tab" />
           </div>
         </Footer>
-        
+        {globalStyles}
       </AppWrapper>
     )
   }

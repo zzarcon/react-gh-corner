@@ -1,7 +1,5 @@
-import styled, {keyframes} from 'styled-components';
-// @ts-ignore: unused variable
-// prettier-ignore
-import { HTMLAttributes, AnchorHTMLAttributes, ClassAttributes, SVGProps } from 'react';
+import styled from '@emotion/styled';
+import {keyframes} from '@emotion/react'
 import { CornerPosition } from './ghCorner';
 
 const wave = keyframes`
@@ -22,7 +20,7 @@ export const OctoArm = styled.path`
 
 export const Link = styled.a`
   &:hover {
-    ${OctoArm} {
+    .octo-arm {
       animation: ${wave} 560ms ease-in-out;
     }
   }
